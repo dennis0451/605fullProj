@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="popAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kiosk.KioskController">
+   <children>
+      <Label fx:id="titleLabel2" alignment="CENTER" layoutX="175.0" layoutY="27.0" prefHeight="39.0" prefWidth="270.0" text="Popcorn">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="quitButton" layoutX="530.0" layoutY="360.0" mnemonicParsing="false" onAction="#quitPressed" text="Dev-Quit">
+         <font>
+            <Font name="Baskerville Old Face" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMainScene" prefHeight="22.0" prefWidth="125.0" text="Previous Menu">
+         <font>
+            <Font name="Baskerville Old Face" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#cartScene" prefHeight="39.0" prefWidth="88.0" text="Check out" />
+      <CheckBox fx:id="smallPopcornCheck" layoutX="175.0" layoutY="83.0" mnemonicParsing="false" text="Small" />
+      <CheckBox fx:id="mediumPopcornCheck" layoutX="175.0" layoutY="113.0" mnemonicParsing="false" text="Medium" />
+      <CheckBox fx:id="largePopcornCheck" layoutX="175.0" layoutY="145.0" mnemonicParsing="false" text="Large" />
+      <Label fx:id="smallPopcornPrice" layoutX="296.0" layoutY="83.0" text="\$X.XX" />
+      <Label fx:id="mediumPopcornPrice" layoutX="296.0" layoutY="113.0" text="\$X.XX" />
+      <Label fx:id="largePopcornPrice" layoutX="296.0" layoutY="145.0" text="\$X.XX" />
+      <TextField fx:id="quantityField" layoutX="296.0" layoutY="187.0" prefHeight="25.0" prefWidth="30.0" />
+      <Label layoutX="241.0" layoutY="191.0" text="Quantity" />
+      <Button fx:id="addToCartButton" layoutX="240.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add To Cart" />
+   </children>
+</AnchorPane>
