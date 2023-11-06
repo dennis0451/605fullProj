@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="movieAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kiosk.KioskController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movietheatreproj.MovieSeatsController">
    <children>
       <Label fx:id="titleLabel2" alignment="CENTER" layoutX="175.0" layoutY="27.0" prefHeight="39.0" prefWidth="270.0" text="Movie Showtimes">
          <font>
@@ -21,12 +21,12 @@
             <Font name="Baskerville Old Face" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMainScene" prefHeight="22.0" prefWidth="125.0" text="Previous Menu">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToPreviousMenu" prefHeight="22.0" prefWidth="125.0" text="Previous Menu">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#cartScene" prefHeight="39.0" prefWidth="88.0" text="Check out" />
+      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#cartMenu" prefHeight="39.0" prefWidth="88.0" text="Check out" />
       <GridPane fx:id="seatingGrid" layoutX="175.0" layoutY="97.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -54,6 +54,6 @@
             <CheckBox fx:id="seat4C" mnemonicParsing="false" text="4C" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button fx:id="addToCartButton" layoutX="250.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add To Cart" />
+      <Button fx:id="addToCartButton" layoutX="250.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add To Cart" onAction="#addSeats" />
    </children>
 </AnchorPane>

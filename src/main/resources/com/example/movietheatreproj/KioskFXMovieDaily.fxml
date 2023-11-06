@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="movieAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kiosk.KioskController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movietheatreproj.MovieDailyController">
    <children>
       <Label fx:id="titleLabel2" alignment="CENTER" layoutX="175.0" layoutY="27.0" prefHeight="39.0" prefWidth="270.0" text="Movie Showtimes">
          <font>
@@ -19,24 +19,21 @@
             <Font name="Baskerville Old Face" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMainScene" prefHeight="22.0" prefWidth="125.0" text="Previous Menu">
+      <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="22.0" prefWidth="125.0" text="Previous Menu">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#cartScene" prefHeight="39.0" prefWidth="88.0" text="Check out" />
-      <TableView layoutX="110.0" layoutY="77.0" prefHeight="167.0" prefWidth="200.0">
+      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#cartMenu" prefHeight="39.0" prefWidth="88.0" text="Check out" />
+      <TableView fx:id="movieShowtimesTable" layoutX="110.0" layoutY="77.0" prefHeight="167.0" prefWidth="200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Movie" />
-            <TableColumn prefWidth="75.0" text="Time" />
+          <TableColumn fx:id="movieColumn" prefWidth="75.0" text="Movie" />
+            <TableColumn fx:id="showtimeColumn" prefWidth="75.0" text="Time" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="selectButton1" layoutX="328.0" layoutY="107.0" mnemonicParsing="false" onAction="#movieSeats" prefHeight="26.0" prefWidth="125.0" text="Select" />
-      <Button fx:id="selectButton2" layoutX="328.0" layoutY="140.0" mnemonicParsing="false" onAction="#movieSeats" prefHeight="26.0" prefWidth="125.0" text="Select" />
-      <Button fx:id="selectButton3" layoutX="328.0" layoutY="177.0" mnemonicParsing="false" onAction="#movieSeats" prefHeight="26.0" prefWidth="125.0" text="Select" />
-      <Button fx:id="selectButton4" layoutX="328.0" layoutY="213.0" mnemonicParsing="false" onAction="#movieSeats" prefHeight="26.0" prefWidth="125.0" text="Select" />
+      <Button fx:id="selectButton1" layoutX="327.0" layoutY="154.0" mnemonicParsing="false" onAction="#selectMovie" prefHeight="26.0" prefWidth="125.0" text="Select" />
    </children>
 </AnchorPane>

@@ -6,7 +6,7 @@ public class Seat {
 
     //Constructor with seat available
     public Seat(int seatID) {
-        this.seatID = seatID;
+        this.seatID = 0;
         this.available = true;
     }
 
@@ -38,4 +38,7 @@ public class Seat {
         return seatID;
     }
 
+    public void setSeatID(int seatID) {
+        this.seatID = seatID;
+    }
 }

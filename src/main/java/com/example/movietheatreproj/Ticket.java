@@ -7,9 +7,11 @@ public class Ticket {
     private String seatNumber;
     private int userID; // Assuming userID is an integer
     private boolean active; // To keep track of the ticket's status
-
+    private static final Ticket instance = new Ticket();
     private static int ticketCounter = 0; // Static counter to generate unique ticket IDs
 
+    //Default Constructor
+    public Ticket() {}
     // Constructor
     public Ticket(String movieTitle, String showTime, int seatNumber, int userID) {
         this.ticketID = generateTicketID();
@@ -90,4 +92,8 @@ public class Ticket {
     }
 
     // More logic and methods as required by your system design
+
+    public static Ticket getInstance() {
+        return instance;
+    }
 }

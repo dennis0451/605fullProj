@@ -1,7 +1,9 @@
 package com.example.movietheatreproj;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -10,14 +12,18 @@ public class Application extends javafx.application.Application {
 //    private static Stage primaryStage;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("KioskFXMain.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("San Diego Movie Theatre Company");
-        stage.setScene(scene);
-        stage.show();
-//        primaryStage = stage;
-
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("KioskFXMain.fxml"));
+            Parent root = loader.load();
+            MainController mainController = loader.getController();
+            mainController.setMainAnchor((AnchorPane) root);
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
@@ -58,8 +64,6 @@ public class Application extends javafx.application.Application {
         } else {
             System.out.println("Seat booking failed.");
         }
-
-
 
 
         // Generate a ticket if the seat was successfully booked

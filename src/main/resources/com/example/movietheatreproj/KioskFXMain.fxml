@@ -5,19 +5,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="mainAnchor" onDragDetected="#quitPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movietheatreproj.KioskController">
+<AnchorPane id="AnchorPane" fx:id="mainAnchor" onDragDetected="#quitPressed" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movietheatreproj.MainController">
    <children>
       <Label fx:id="titleLabel" alignment="CENTER" layoutX="40.0" layoutY="49.0" prefHeight="39.0" prefWidth="270.0" text="Movie Showtimes">
          <font>
             <Font name="Baskerville Old Face" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="todaySelections" layoutX="107.0" layoutY="109.0" mnemonicParsing="false" onAction="#movieSelectionsToday" prefHeight="22.0" prefWidth="125.0" text="Today's Showings">
+      <Button fx:id="todaySelections" layoutX="107.0" layoutY="109.0" mnemonicParsing="false" onAction="#switchToTodaysShowingsMenu" prefHeight="22.0" prefWidth="125.0" text="Today's Showings">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="sodaButton" layoutX="382.0" layoutY="109.0" mnemonicParsing="false" onAction="#sodaScene" prefHeight="22.0" prefWidth="125.0" text="Soda Selections">
+      <Button fx:id="sodaButton" layoutX="382.0" layoutY="109.0" mnemonicParsing="false" onAction="#switchToSodaMenu" prefHeight="22.0" prefWidth="125.0" text="Soda Selections">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
@@ -37,16 +37,16 @@
             <Font name="Baskerville Old Face" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="futureSelections" layoutX="107.0" layoutY="145.0" mnemonicParsing="false" onAction="#movieSelectionsFuture" prefHeight="22.0" prefWidth="125.0" text="Future Showings">
+      <Button fx:id="futureSelections" layoutX="107.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToFutureShowingsMenu" prefHeight="22.0" prefWidth="125.0" text="Future Showings">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="popcornSelections" layoutX="382.0" layoutY="145.0" mnemonicParsing="false" onAction="#popcornScene" prefHeight="22.0" prefWidth="125.0" text="Popcorn Selections">
+      <Button fx:id="popcornSelections" layoutX="382.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToPopcornMenu" prefHeight="22.0" prefWidth="125.0" text="Popcorn Selections">
          <font>
             <Font name="Baskerville Old Face" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="235.0" mnemonicParsing="false" onAction="#cartScene" prefHeight="39.0" prefWidth="88.0" text="Check out" />
+      <Button fx:id="checkOutButton" layoutX="266.0" layoutY="235.0" mnemonicParsing="false" onAction="#switchToCheckOut" prefHeight="39.0" prefWidth="88.0" text="Check out" />
    </children>
 </AnchorPane>
