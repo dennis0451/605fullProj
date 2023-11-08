@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="mainAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movietheatreproj.CheckOutController">
    <children>
-      <Label fx:id="titleLabel2" alignment="CENTER" layoutX="175.0" layoutY="27.0" prefHeight="39.0" prefWidth="270.0" text="Cart">
+      <Label fx:id="titleLabel2" alignment="CENTER" layoutX="175.0" layoutY="27.0" prefHeight="39.0" prefWidth="270.0" text="com.example.movietheatreproj.Cart">
          <font>
             <Font name="Baskerville Old Face" size="24.0" />
          </font>

@@ -54,6 +54,6 @@
             <CheckBox fx:id="seat4C" mnemonicParsing="false" text="4C" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button fx:id="addToCartButton" layoutX="250.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add To Cart" onAction="#addSeats" />
+      <Button fx:id="addToCartButton" layoutX="250.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Add To com.example.movietheatreproj.Cart" onAction="#addSeats" />
    </children>
 </AnchorPane>
