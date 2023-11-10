@@ -66,7 +66,7 @@ public class Application extends javafx.application.Application {
         }
 
 
-        // Generate a ticket if the seat was successfully booked
+        //Generate a ticket if the seat was successfully booked
         if (seat.checkAvailability()) {
             Ticket ticket = kiosk.generateTicket(user, "The Grand Adventure", "12:00 PM", seat);
             if (ticket != null) {
@@ -74,13 +74,13 @@ public class Application extends javafx.application.Application {
             }
         }
 
-        // Dispense a concession item
+        //Dispense a concession item
         boolean concessionDispensed = kiosk.dispenseConcession(popcorn);
         if (concessionDispensed) {
             System.out.println("Concession dispensed: " + popcorn);
         }
 
-        // Display the available seats
+        //Display the available seats
         theatre.displayAvailableSeats();
 
         //TODO test logic ENDS here

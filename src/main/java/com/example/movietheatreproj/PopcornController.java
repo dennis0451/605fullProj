@@ -50,8 +50,10 @@ public class PopcornController {
     @FXML
     private Label titleLabel2;
 
-    private Cart cart = new Cart(); // Local cart instance for testing
+    //singleton instance
+    Cart cart = Cart.getInstance();
     private ObservableList<Concession> cartItems = FXCollections.observableArrayList();
+
 
 
     @FXML
@@ -61,6 +63,13 @@ public class PopcornController {
         columnPrice.setCellValueFactory(new PropertyValueFactory<>("concessionPrice"));
 
         popcornSelectionTable.setItems(cartItems);
+        refreshCartView();
+    }
+
+    private void refreshCartView() {
+        Cart cart = Cart.getInstance();
+        cartItems.clear();
+        cartItems.addAll(cart.getItems());
     }
 
     @FXML
@@ -104,6 +113,8 @@ public class PopcornController {
 
         showAlert("Success", "Added " + quantity + " of Popcorn to cart.", Alert.AlertType.INFORMATION);
     }
+
+
 
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);

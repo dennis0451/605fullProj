@@ -30,7 +30,8 @@ public class SodaMenuController {
     @FXML private TableColumn<Concession, String> columnName;
     @FXML private TableColumn<Concession, Number> columnPrice;
 
-    private Cart cart = new Cart(); //cart instance to hold soda
+    //singleton instance
+    Cart cart = Cart.getInstance();
     private ObservableList<Concession> cartItems = FXCollections.observableArrayList();
 
     @FXML
@@ -40,6 +41,14 @@ public class SodaMenuController {
         columnPrice.setCellValueFactory(new PropertyValueFactory<>("concessionPrice"));
 
         sodaSelectionTable.setItems(cartItems);
+        refreshCartView();
+
+    }
+
+    private void refreshCartView() {
+        Cart cart = Cart.getInstance();
+        cartItems.clear();
+        cartItems.addAll(cart.getItems());
     }
 
     public void removeFromCart(Concession concession) {

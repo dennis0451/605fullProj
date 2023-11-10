@@ -63,5 +63,4 @@ public class Theatre {
         return theatreName;
     }
 
-    // Additional methods like updating seat status, etc. can be added here.
 }

@@ -7,8 +7,20 @@ import java.util.List;
 //cart class to hold concession objects.
 //TODO look up/research singleton to only have one instance of cart
 public class Cart {
-    private final List<Concession> items = new ArrayList<>();
+    private static Cart instance = null;
+    private List<Concession> items;
 
+    private Cart() {
+        items = new ArrayList<>();
+    }
+
+    //checks for singleton
+    public static Cart getInstance() {
+        if (instance == null) {
+            instance = new Cart();
+        }
+        return instance;
+    }
     public List<Concession> getItems() {
         return items;
     }
@@ -26,3 +38,4 @@ public class Cart {
     }
 
 }
+

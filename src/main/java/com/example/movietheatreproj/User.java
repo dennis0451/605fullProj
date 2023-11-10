@@ -52,12 +52,7 @@ public class User {
         return false;
     }
 
-    // Methods for purchasing concessions would be similarly structured
 
-    // LogIn and LogOut methods would be part of the authentication logic
-    // and would probably interact with session management or a database
-
-    // Getters and setters for the fields
 
     public int getUserID() {
         return userID;
@@ -95,5 +90,4 @@ public class User {
         return tickets;
     }
 
-    // More logic and methods as required by your system design
 }
