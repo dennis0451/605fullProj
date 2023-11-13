@@ -28,9 +28,9 @@
       <Button fx:id="paymentButton" layoutX="266.0" layoutY="340.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="88.0" text="Payment" />
       <TableView fx:id="cartTable" layoutX="164.0" layoutY="83.0" prefHeight="164.0" prefWidth="291.0">
         <columns>
-          <TableColumn fx:id="itemColumn" prefWidth="75.0" text="Item" />
-          <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Qty" />
-            <TableColumn prefWidth="75.0" text="Price" />
+          <TableColumn fx:id="columnId" prefWidth="75.0" text="Item" />
+          <TableColumn fx:id="columnName" prefWidth="75.0" text="Qty" />
+           <TableColumn fx:id="columnPrice" prefWidth="75.0" text="Price" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

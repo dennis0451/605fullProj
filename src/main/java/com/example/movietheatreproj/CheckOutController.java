@@ -21,22 +21,42 @@ public class CheckOutController {
     @FXML private Button quitButton;
     @FXML private Button backButton;
     @FXML private Button paymentButton;
-    @FXML private TableView<Ticket> cartTable;
-    @FXML private TableColumn<Ticket, String> itemColumn;
-    @FXML private TableColumn<Ticket, String> quantityColumn;
+    @FXML private TableView<Concession> cartTable;
+
     @FXML private Label subtotalLabel;
     @FXML private Label taxLabel;
     @FXML private Label totalLabel;
     @FXML private TextField SubtotalField;
     @FXML private TextField totalField;
     @FXML private Button removeFromCart;
+    @FXML private TableColumn<Concession, Number> columnId;
+    @FXML private TableColumn<Concession, String> columnName;
+    @FXML private TableColumn<Concession, Number> columnPrice;
+
+
+    Cart cart = Cart.getInstance();
+
+    private ObservableList<Concession> cartItems = FXCollections.observableArrayList();
 
     @FXML public void initialize() {
-        ObservableList<Ticket> selectedTickets = FXCollections.observableArrayList();
-        selectedTickets.add(ticket);
-        cartTable.setItems(selectedTickets);
-        itemColumn.setCellValueFactory(new PropertyValueFactory<>(ticket.getMovieTitle()));
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<>(ticket.getSeatNumber()));
+        columnId.setCellValueFactory(new PropertyValueFactory<>("concessionID"));
+        columnName.setCellValueFactory(new PropertyValueFactory<>("concessionType"));
+        columnPrice.setCellValueFactory(new PropertyValueFactory<>("concessionPrice"));
+
+//        ObservableList<Ticket> selectedTickets = FXCollections.observableArrayList();
+//        selectedTickets.add(ticket);
+//        cartTable.setItems(selectedTickets);
+//        itemColumn.setCellValueFactory(new PropertyValueFactory<>(ticket.getMovieTitle()));
+//        quantityColumn.setCellValueFactory(new PropertyValueFactory<>(ticket.getSeatNumber()));
+        cartTable.setItems(cartItems);
+        refreshCartView();
+
+    }
+
+    private void refreshCartView() {
+        Cart cart = Cart.getInstance();
+        cartItems.clear();
+        cartItems.addAll(cart.getItems());
     }
 
     @FXML public void quitPressed(ActionEvent event) {
